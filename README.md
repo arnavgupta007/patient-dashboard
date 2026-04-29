@@ -1,70 +1,137 @@
-# Getting Started with Create React App
+# HealthOS — Patient Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page patient health dashboard built as part of the Coalition Technologies Frontend Skills Test.
 
-## Available Scripts
+Displays patient data for **Jessica Taylor** fetched live from the Coalition Technologies API, including a blood pressure chart, diagnostic history, vital signs, and lab results.
 
-In the project directory, you can run:
+![Dashboard Preview](<img width="1912" height="946" alt="image" src="https://github.com/user-attachments/assets/6f65a35f-7a40-4dd5-b878-728b36f36a7c" />
+)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 18
+- Chart.js + react-chartjs-2
+- Vanilla CSS (no UI framework)
+- Fetch API for data fetching
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Live API integration with Coalition Technologies patient data API
+- Blood pressure trend chart (last 6 months) using Chart.js
+- Diagnostic history table with status badges
+- Patient vital signs (temperature, heart rate, respiratory rate, BMI)
+- Lab results list
+- Patient sidebar with full patient list
+- Skeleton loading states
+- Clean warm clinical UI theme
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Structure
+patient-dashboard/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── App.jsx                          # Root component, API fetch, state management
+│   │
+│   ├── services/
+│   │   └── api.js                       # API calls and Jessica Taylor filter
+│   │
+│   ├── components/
+│   │   ├── BloodPressureChart.jsx       # Chart.js line chart
+│   │   ├── PatientSidebar.jsx           # Left sidebar patient list
+│   │   └── PatientProfile.jsx           # Right panel vitals, labs, profile
+│   │
+│   ├── pages/
+│   │   └── Dashboard.jsx               # BP card + diagnosis history
+│   │
+│   └── styles/
+│       └── globals.css                  # CSS variables + all styles
+│
+├── .gitignore
+├── package.json
+└── README.md
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## Getting Started
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Prerequisites
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Make sure you have these installed:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- [Node.js](https://nodejs.org) (v16 or higher)
+  
+- npm (comes with Node.js)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Check by running:
 
-## Learn More
+```bash
+node --version
+npm --version
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Installation
 
-### Code Splitting
+**1. Clone the repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```bash
+git clone https://github.com/arnavgupta007/patient-dashboard.git
+```
 
-### Analyzing the Bundle Size
+**2. Go into the project folder**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd patient-dashboard
+```
 
-### Making a Progressive Web App
+**3. Install dependencies**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+npm install
+```
 
-### Advanced Configuration
+**4. Start the development server**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm start
+```
 
-### Deployment
+**5. Open in browser**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+The app will automatically open at:
+http://localhost:3000
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## API
+
+This project uses the Coalition Technologies Patient Data API.
+
+- **Endpoint:** `https://fedskillstest.coalitiontechnologies.workers.dev`
+- **Method:** GET
+- **Auth:** Basic Authentication (`coalition:skills-test`)
+- **Data shown:** Jessica Taylor only (filtered from full patient list)
+
+---
+
+## Design
+
+- **Font:** Libre Baskerville (headings) + DM Sans (body)
+- **Theme:** Warm Clinical — off-white canvas, sage green accents, dusty rose for alerts
+- **No external UI libraries** — all styles written from scratch using CSS variables
+
+---
+
+## Author
+
+Your Name  
+[GitHub](https://github.com/arnavgupta007)
