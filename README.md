@@ -33,29 +33,50 @@ Displays patient data for **Jessica Taylor** fetched live from the Coalition Tec
 
 ## Project Structure
 patient-dashboard/
+
 │
 ├── public/
+
 │   └── index.html
+
 │
 ├── src/
-│   ├── App.jsx                          # Root component, API fetch, state management
+
+│   ├── App.jsx                           # Root component, API fetch, state management
 │   │
+
 │   ├── services/
+
 │   │   └── api.js                       # API calls and Jessica Taylor filter
+
 │   │
+
 │   ├── components/
+
 │   │   ├── BloodPressureChart.jsx       # Chart.js line chart
+
 │   │   ├── PatientSidebar.jsx           # Left sidebar patient list
+
 │   │   └── PatientProfile.jsx           # Right panel vitals, labs, profile
+
 │   │
+
 │   ├── pages/
+
 │   │   └── Dashboard.jsx               # BP card + diagnosis history
+
 │   │
+
 │   └── styles/
+
 │       └── globals.css                  # CSS variables + all styles
+
 │
+
 ├── .gitignore
+
 ├── package.json
+
 └── README.md
 
 ---
