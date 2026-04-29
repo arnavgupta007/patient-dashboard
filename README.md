@@ -3,9 +3,9 @@
 A single-page patient health dashboard built as part of the Coalition Technologies Frontend Skills Test.
 
 Displays patient data for **Jessica Taylor** fetched live from the Coalition Technologies API, including a blood pressure chart, diagnostic history, vital signs, and lab results.
+<img width="1912" height="946" alt="image" src="https://github.com/user-attachments/assets/3ef6092d-3369-4563-901a-9098e181cb10" />
 
-![Dashboard Preview](<img width="1912" height="946" alt="image" src="https://github.com/user-attachments/assets/6f65a35f-7a40-4dd5-b878-728b36f36a7c" />
-)
+
 
 ---
 
